@@ -1,0 +1,47 @@
+server:
+  servlet:
+    context-path: /supplier-facts-service/
+  shutdown: graceful
+  max-http-request-header-size: 10KB
+
+springdoc:
+  swagger-ui:
+    path: /internal_api/
+  api-docs:
+    path: /internal_api/api-docs
+  show-login-endpoint: true
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 1m
+  main:
+    banner-mode: off
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 100MB
+  datasource:
+    url: jdbc:postgresql://${POSTGRESQL_DATABASE_HOST:localhost}:${POSTGRESQL_DATABASE_PORT:5432}/supplier_facts
+    username: ${POSTGRESQL_DATABASE_USER:postgres}
+    password: ${POSTGRESQL_DATABASE_PASSWORD:postgres}
+    hikari:
+      data-source-properties: stringtype=unspecified
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+
+
+management:
+  endpoint:
+    info:
+      access: read_only
+    health:
+      show-details: always
+    metrics:
+      access: read_only
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+      base-path: /status/

@@ -1,0 +1,7 @@
+.DS_Store
+connect-admin/node_modules
+
+supplier-facts/.gradle
+supplier-facts/.idea
+supplier-facts/.kotlin
+supplier-facts/build
