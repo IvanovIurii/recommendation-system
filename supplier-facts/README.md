@@ -18,3 +18,4 @@ delivery_area array[text] \
    was created by LLM, meaning it is not clear what result will be
    acquired at the end
 5. There is no unit/integrations tests as well (DDD/debug-driven-development has been used)
+6. Explain why I used Spring Data Jdbc and not JPA

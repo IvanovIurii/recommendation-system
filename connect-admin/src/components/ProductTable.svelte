@@ -59,7 +59,7 @@
     {:else}
         {#each products as prod}
             <tr>
-                <td>{prod.id}</td>
+                <td>{prod.supplierId}</td>
                 <td>{prod.productName}</td>
                 <td>{prod.productDescription}</td>
                 <td>{prod.productType}</td>

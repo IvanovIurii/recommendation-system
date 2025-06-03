@@ -4,6 +4,8 @@ CREATE TABLE IF NOT EXISTS rfq_core
     title             TEXT      NOT NULL,
     description       TEXT      NOT NULL,
     delivery_location TEXT      NOT NULL,
+    product_type      TEXT      NOT NULL,
+    status            TEXT      NOT NULL,             -- NEW, PROCESSED
     created           TIMESTAMP NOT NULL,
     updated           TIMESTAMP
 );
@@ -23,7 +25,8 @@ ALTER TABLE rfq_core
         UNIQUE (
                 title,
                 description,
-                delivery_location
+                delivery_location,
+                product_type
             );
 
 ALTER TABLE matching_core

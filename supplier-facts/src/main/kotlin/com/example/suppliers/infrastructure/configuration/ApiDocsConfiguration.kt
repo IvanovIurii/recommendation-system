@@ -17,7 +17,7 @@ class ApiDocsConfiguration {
             .info(
                 Info()
                     .title("Supplier-Facts Service")
-                    .version("1.0")
+                    .version("1.0"),
             )
     }
 }
