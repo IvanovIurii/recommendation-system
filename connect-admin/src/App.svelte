@@ -8,14 +8,17 @@
 
     // currentPage: 'home' | 'products' | 'requests' | 'requestDetail'
     let currentPage = 'home';
+
     // when currentPage === 'requestDetail', selectedRequestId holds the UUID
     let selectedRequestId = null;
 
-    // Parse the hash to set currentPage & selectedRequestId
+    // store the full object (so title/description/location are immediately available)
+    let selectedRequest = {};
+
+    // Parse window.location.hash → currentPage & selectedRequestId
     function syncFromHash() {
         const raw = window.location.hash.slice(1); // strip leading '#'
         if (!raw) {
-            // no hash: default to home
             currentPage = 'home';
             selectedRequestId = null;
             return;
@@ -31,26 +34,33 @@
             currentPage = 'requestDetail';
             selectedRequestId = param;
         } else {
-            // any unrecognized hash → home
             currentPage = 'home';
             selectedRequestId = null;
         }
     }
 
     function navigateTo(payload) {
-        // payload can be a simple string ('home'/'products'/'requests')
-        // or an object { page: 'requestDetail', id: '<UUID>' }
+        // payload = either a string ('home'/'products'/'requests')
+        // or { page: 'requestDetail', id: '<UUID>' }
         if (typeof payload === 'string') {
             window.location.hash = payload;
         } else if (payload.page === 'requestDetail' && payload.id) {
             window.location.hash = `requestDetail/${payload.id}`;
-        }
-        else {
+        } else {
             window.location.hash = 'home';
         }
     }
 
+    // Handle the dispatched “navigate” event
     function onNavigateEvent(e) {
+        const {page: p, id: idParam, request} = e.detail;
+
+        // If we got a full request object, store it now
+        if (p === 'requestDetail' && request) {
+            selectedRequest = request;
+        }
+
+        // Then update the URL hash based on page & id
         navigateTo(e.detail);
     }
 
@@ -69,9 +79,14 @@
     {:else if currentPage === 'products'}
         <ProductTable/>
     {:else if currentPage === 'requests'}
-        <!-- Pass navigate event back to App -->
+        <!-- Pass the same navigate handler down -->
         <Requests on:navigate={onNavigateEvent}/>
     {:else if currentPage === 'requestDetail' && selectedRequestId}
-        <RequestDetails {selectedRequestId} on:navigate={onNavigateEvent}/>
+        <!-- Now pass both the ID and the full request object -->
+        <RequestDetails
+                {selectedRequestId}
+                {selectedRequest}
+                on:navigate={onNavigateEvent}
+        />
     {/if}
 </main>

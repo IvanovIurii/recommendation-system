@@ -12,18 +12,19 @@ data class RfqCoreEntity(
     val title: String,
     val description: String,
     val deliveryLocation: String,
+    val productType: String,
+    val status: String,
     val created: Instant,
     val updated: Instant? = null,
 )
 
-
 @Table("matching_core")
-data class MatchingCore(
+data class MatchingCoreEntity(
     @Id
     val matchingId: UUID,
     val rfqId: UUID,
     val supplierId: UUID,
     val status: String?,
     val created: Instant,
-    val updated: Instant?,
+    val updated: Instant? = null,
 )

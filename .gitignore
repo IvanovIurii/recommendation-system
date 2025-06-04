@@ -10,3 +10,4 @@ rfq-service/.idea
 rfq-service/build
 rfq-service/.kotlin
 rfq-service/.gradle
+.idea/

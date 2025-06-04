@@ -2,6 +2,7 @@
     let requestTitle = '';
     let requestDescription = '';
     let deliveryLocation = '';
+    let productType = '';
 
     let submitting = false;
     let successMessage = '';
@@ -20,7 +21,8 @@
                 body: JSON.stringify({
                     title: requestTitle,
                     description: requestDescription,
-                    delivery_location: deliveryLocation
+                    delivery_location: deliveryLocation,
+                    product_type: productType,
                 })
             });
 
@@ -33,6 +35,7 @@
             requestTitle = '';
             requestDescription = '';
             deliveryLocation = '';
+            productType = '';
         } catch (err) {
             console.error(err);
             errorMessage = 'Failed to create request. Please try again.';
@@ -79,6 +82,18 @@
                     bind:value={deliveryLocation}
                     required
                     placeholder="Enter delivery location"
+            />
+        </div>
+
+        <div class="mb-3">
+            <label for="type" class="form-label">Product Type</label>
+            <input
+                    id="type"
+                    type="text"
+                    class="form-control"
+                    bind:value={productType}
+                    required
+                    placeholder="Enter product type"
             />
         </div>
 

@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS matching_core
     matching_id uuid      NOT NULL PRIMARY KEY, -- generated
     rfq_id      uuid      NOT NULL,
     supplier_id uuid      NOT NULL,
-    status      TEXT      NOT NULL,             -- not used for now
+    status      TEXT      NOT NULL,             -- not used for now: CREATED only, PUBLISHED
     created     TIMESTAMP NOT NULL,
     updated     TIMESTAMP
 );

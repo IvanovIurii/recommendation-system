@@ -25,8 +25,13 @@
         }
     }
 
-    function goToDetail(id) {
-        dispatch('navigate', {page: 'requestDetail', id});
+    // Now accepts the entire `req` object instead of only its ID
+    function goToDetail(req) {
+        dispatch('navigate', {
+            page: 'requestDetail',
+            id: req.rfqId,
+            request: req
+        });
     }
 
     onMount(fetchRequests);
@@ -64,7 +69,10 @@
                 </thead>
                 <tbody>
                 {#each requests as req}
-                    <tr on:click={() => goToDetail(req.rfqId)} style="cursor: pointer;">
+                    <tr
+                            style="cursor: pointer;"
+                            on:click={() => goToDetail(req)}
+                    >
                         <td>{req.rfqId}</td>
                         <td>{req.title}</td>
                         <td>{req.description}</td>
@@ -76,4 +84,3 @@
         </div>
     {/if}
 </div>
-  

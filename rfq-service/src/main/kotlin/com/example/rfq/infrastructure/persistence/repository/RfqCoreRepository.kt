@@ -3,6 +3,7 @@ package com.example.rfq.infrastructure.persistence.repository
 import com.example.rfq.infrastructure.persistence.model.RfqCoreEntity
 import org.springframework.data.jdbc.core.JdbcAggregateTemplate
 import org.springframework.stereotype.Repository
+import java.util.UUID
 
 @Repository
 class RfqCoreRepository(
@@ -16,5 +17,9 @@ class RfqCoreRepository(
 
     fun findAll(): List<RfqCoreEntity> {
         return jdbcAggregateTemplate.findAll(RfqCoreEntity::class.java)
+    }
+
+    fun findById(rfqId: UUID): RfqCoreEntity? {
+        return jdbcAggregateTemplate.findById(rfqId, RfqCoreEntity::class.java)
     }
 }

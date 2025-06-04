@@ -18,7 +18,9 @@ class DefaultRequestsService(
             title = rfq.title,
             description = rfq.description,
             deliveryLocation = rfq.deliveryLocation,
-            created = Instant.now()
+            productType = rfq.productType,
+            created = Instant.now(),
+            status = "NEW"
         )
         rfqCoreRepository.save(rfqEntity)
     }
