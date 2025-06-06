@@ -17,7 +17,7 @@ class ApiDocsConfiguration {
             .info(
                 Info()
                     .title("Rfq Service")
-                    .version("1.0")
+                    .version("1.0"),
             )
     }
 }

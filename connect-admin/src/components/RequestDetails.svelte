@@ -8,7 +8,7 @@
 
     let supplierInput = '';
     let pendingSupplierIds = [];   // UUIDs the user has typed but not yet submitted
-    let supplierList = [];         // Array of { id, name, description } already attached to this RFQ
+    let supplierList = [];
     let errorMessage = '';
     let successMessage = '';
     let submitting = false;
@@ -24,9 +24,7 @@
                 const text = await res.text();
                 throw new Error(`Error ${res.status}: ${text}`);
             }
-            // Expecting JSON array: [{ id: 'uuid-...', name: 'Supplier A', description: '...' }, ...]
-            const data = await res.json();
-            supplierList = data;
+            supplierList = await res.json();
         } catch (err) {
             console.error(err);
             errorMessage = 'Could not load existing suppliers.';
@@ -39,7 +37,6 @@
     });
 
     function addSupplier() {
-        // Clear any prior messages
         errorMessage = '';
         successMessage = '';
 
@@ -78,7 +75,6 @@
 
     async function handleSubmit(e) {
         e.preventDefault();
-        // Clear messages
         errorMessage = '';
         successMessage = '';
 
@@ -129,6 +125,14 @@
 
     function goBack() {
         dispatch('navigate', 'requests');
+    }
+
+    // Helper to format a UTC‐ISO string into the browser’s locale & timezone
+    function formatDate(utcString) {
+        if (!utcString) return '';
+        const d = new Date(utcString);
+        // toLocaleString() will use the user’s locale & timezone automatically
+        return d.toLocaleString();
     }
 </script>
 
@@ -232,7 +236,7 @@
                 <tr>
                     <th>Supplier ID</th>
                     <th>Name</th>
-                    <th>Description</th>
+                    <th>Created At (Local)</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -240,7 +244,7 @@
                     <tr>
                         <td>{sup.id}</td>
                         <td>{sup.name}</td>
-                        <td>{sup.description}</td>
+                        <td>{formatDate(sup.created)}</td>
                     </tr>
                 {/each}
                 </tbody>

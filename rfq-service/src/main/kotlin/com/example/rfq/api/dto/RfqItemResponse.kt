@@ -1,13 +1,12 @@
-package com.example.rfq.domain
+package com.example.rfq.api.dto
 
+import java.time.Instant
 import java.util.UUID
 
-// todo: should DTOs go to domain?
-// Are DTOs domain or not?
-
-data class ResponseRfqDto(
+data class RfqItemResponse(
     val rfqId: UUID,
     val title: String,
     val description: String,
     val deliveryLocation: String,
+    val createdAt: Instant,
 )

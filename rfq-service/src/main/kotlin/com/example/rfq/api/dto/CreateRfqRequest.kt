@@ -1,8 +1,10 @@
-package com.example.rfq.domain
+package com.example.rfq.api.dto
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
-data class Rfq(
+// validation and JSON creation goes here on presentation layer
+
+data class CreateRfqRequest(
     val title: String,
     val description: String,
     @JsonProperty("delivery_location")
@@ -10,5 +12,3 @@ data class Rfq(
     @JsonProperty("product_type")
     val productType: String,
 )
-
-// todo: crete DTO with Jackson

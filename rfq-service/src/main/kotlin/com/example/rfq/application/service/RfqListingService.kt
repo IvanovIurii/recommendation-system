@@ -1,22 +1,15 @@
 package com.example.rfq.application.service
 
-import com.example.rfq.domain.RequestsService
-import com.example.rfq.domain.ResponseRfqDto
+import com.example.rfq.application.RequestsService
+import com.example.rfq.application.dto.RfqItem
 import org.springframework.stereotype.Service
 
 @Service
 class RfqListingService(
     private val requestsService: RequestsService,
 ) {
-    fun listAll(): List<ResponseRfqDto> {
-        return requestsService.listAll().map { entity ->
-            ResponseRfqDto(
-                rfqId = entity.rfqId,
-                title = entity.title,
-                description = entity.description,
-                deliveryLocation = entity.deliveryLocation
-            )
-        }
+    fun listAll(): List<RfqItem> {
+        return requestsService.listAll()
     }
 
     private companion object {

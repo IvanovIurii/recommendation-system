@@ -16,9 +16,10 @@ class MatchingCoreRepository(
     }
 
     fun findAll(rfqId: UUID): List<MatchingCoreEntity> {
-        val query = Query.query(
-            Criteria.where("rfq_id").`is`(rfqId)
-        )
+        val query =
+            Query.query(
+                Criteria.where("rfq_id").`is`(rfqId),
+            )
         return jdbcAggregateTemplate.findAll(query, MatchingCoreEntity::class.java)
     }
 }
