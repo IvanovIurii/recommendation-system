@@ -52,6 +52,11 @@ class SupplierProductRepository(
         jdbcAggregateTemplate.insertAll(productList)
     }
 
+    // todo: should not really return entity, but domain object
+    fun findById(supplierId: UUID): SupplierEntity? {
+        return jdbcAggregateTemplate.findById(supplierId, SupplierEntity::class.java)
+    }
+
     fun findAll(pageable: Pageable): Page<SupplierProductAggregate> {
         val content = fetchProductSuppliersPage(pageable)
         val total = countProductSuppliers()

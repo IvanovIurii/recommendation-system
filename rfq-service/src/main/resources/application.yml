@@ -32,6 +32,10 @@ logging:
   level:
     org.springframework.web: DEBUG
 
+app:
+  api:
+    supplier-facts-api:
+      url: http://localhost:8080/supplier-facts-service/internal_api
 
 management:
   endpoint:

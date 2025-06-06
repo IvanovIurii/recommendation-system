@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page
 import org.springframework.data.domain.PageRequest
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
@@ -48,6 +49,21 @@ class MainController(
 
         return ResponseEntity.ok(result)
     }
+
+    @GetMapping("/suppliers/{supplierId}")
+    fun getSupplier(
+        @PathVariable supplierId: UUID,
+    ): ResponseEntity<SupplierDto> {
+        val supplier = supplierProductService.getSupplier(supplierId)
+            ?: throw RuntimeException("Supplier not found")
+
+        return ResponseEntity.ok(
+            SupplierDto(
+                supplierId = supplier.supplierId,
+                supplierName = supplier.supplierName,
+            )
+        )
+    }
 }
 
 data class SupplierProductDto(
@@ -57,4 +73,9 @@ data class SupplierProductDto(
     val productName: String,
     val productDescription: String,
     val productType: String,
+)
+
+data class SupplierDto(
+    val supplierId: UUID,
+    val supplierName: String,
 )

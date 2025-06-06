@@ -3,6 +3,7 @@ package com.example.rfq.application.service
 import com.example.rfq.application.dto.AddSuppliersCommand
 import com.example.rfq.application.dto.MatchedSupplierItem
 import com.example.rfq.domain.model.MatchingStatus
+import com.example.rfq.infrastructure.clients.SupplierFactsClientService
 import com.example.rfq.infrastructure.persistence.model.MatchingCoreEntity
 import com.example.rfq.infrastructure.persistence.repository.MatchingCoreRepository
 import com.example.rfq.infrastructure.persistence.repository.RfqCoreRepository
@@ -15,6 +16,7 @@ class MatchingCreationService(
     // repositories technically should be handled via interfaces implemented in the infrastructure layer
     private val matchingCoreRepository: MatchingCoreRepository,
     private val rfqCoreRepository: RfqCoreRepository,
+    private val supplierFactsClientService: SupplierFactsClientService,
 ) {
     // todo: we have to check here that those suppliers were already added to this rfq
     fun addSuppliers(addSuppliersCommand: AddSuppliersCommand) {
@@ -42,13 +44,15 @@ class MatchingCreationService(
         }
     }
 
+    // todo: should be called async
     fun getSuppliers(rfqId: UUID): List<MatchedSupplierItem> {
-        // todo: we need to call supplier-facts API
         return matchingCoreRepository.findAll(rfqId).map { entity ->
-            // todo: add and render timestamp on UI as well
+            val supplier = supplierFactsClientService.getSupplierById(entity.supplierId)
+
             MatchedSupplierItem(
                 id = entity.matchingId,
-                name = "NAME",
+                // fixme: just returns a list of errors to show on UI
+                name = supplier?.supplierName ?: "ERROR: Supplier Not Found",
                 created = entity.created,
             )
         }
