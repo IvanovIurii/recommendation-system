@@ -10,12 +10,24 @@ data class SupplierFactsProperties(
     val url: String,
 )
 
+@ConfigurationProperties(prefix = "app.api.recommendation-service-api")
+data class RecommendationServiceProperties(
+    val url: String,
+)
+
 @Configuration
 class ServiceClientConfiguration {
     @Bean
     fun supplierFactsClient(
         builder: RestClient.Builder,
         properties: SupplierFactsProperties,
+    ): RestClient =
+        builder.baseUrl(properties.url).build()
+
+    @Bean
+    fun recommendationServiceClient(
+        builder: RestClient.Builder,
+        properties: RecommendationServiceProperties,
     ): RestClient =
         builder.baseUrl(properties.url).build()
 }

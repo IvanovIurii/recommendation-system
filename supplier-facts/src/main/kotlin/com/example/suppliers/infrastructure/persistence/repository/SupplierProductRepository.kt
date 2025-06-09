@@ -8,12 +8,15 @@ import org.springframework.data.domain.Page
 import org.springframework.data.domain.PageImpl
 import org.springframework.data.domain.Pageable
 import org.springframework.data.jdbc.core.JdbcAggregateTemplate
+import org.springframework.data.relational.core.query.Criteria
+import org.springframework.data.relational.core.query.Query.query
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 import java.time.Instant
 import java.util.UUID
+import kotlin.jvm.optionals.getOrNull
 
 @Repository
 class SupplierProductRepository(
@@ -57,6 +60,11 @@ class SupplierProductRepository(
         return jdbcAggregateTemplate.findById(supplierId, SupplierEntity::class.java)
     }
 
+    fun findByName(name: String): SupplierEntity? {
+        val query = query(Criteria.where("supplier_name").`is`(name))
+        return jdbcAggregateTemplate.findOne(query, SupplierEntity::class.java).getOrNull()
+    }
+
     fun findAll(pageable: Pageable): Page<SupplierProductAggregate> {
         val content = fetchProductSuppliersPage(pageable)
         val total = countProductSuppliers()
@@ -98,10 +106,10 @@ class SupplierProductRepository(
                 supplierName = rs.getString("supplier_name"),
                 // fixme
                 deliveryArea =
-                    rs.getString("delivery_area")
-                        .replace("{", "")
-                        .replace("}", "")
-                        .split(","),
+                rs.getString("delivery_area")
+                    .replace("{", "")
+                    .replace("}", "")
+                    .split(","),
                 productName = rs.getString("product_name"),
                 productDescription = rs.getString("product_description"),
                 productType = rs.getString("product_type"),

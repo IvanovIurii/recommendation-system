@@ -64,6 +64,21 @@ class MainController(
             )
         )
     }
+
+    @GetMapping("/suppliers")
+    fun getSupplierByName(
+        @RequestParam name: String,
+    ): ResponseEntity<SupplierDto> {
+        val supplier = supplierProductService.getSupplier(name)
+            ?: throw RuntimeException("Supplier with name $name not found")
+
+        return ResponseEntity.ok(
+            SupplierDto(
+                supplierId = supplier.supplierId,
+                supplierName = supplier.supplierName,
+            )
+        )
+    }
 }
 
 data class SupplierProductDto(

@@ -9,4 +9,5 @@ data class RfqItemResponse(
     val description: String,
     val deliveryLocation: String,
     val createdAt: Instant,
+    val type: String? = null,
 )

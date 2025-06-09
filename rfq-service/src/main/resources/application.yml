@@ -36,6 +36,9 @@ app:
   api:
     supplier-facts-api:
       url: http://localhost:8080/supplier-facts-service/internal_api
+    recommendation-service-api:
+      url: http://localhost:8000/recommendation-service/internal_api
+
 
 management:
   endpoint:

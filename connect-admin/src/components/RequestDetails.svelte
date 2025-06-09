@@ -2,13 +2,15 @@
     import {createEventDispatcher, onMount} from 'svelte';
 
     export let selectedRequestId;
-    export let selectedRequest;
 
     const dispatch = createEventDispatcher();
 
     let supplierInput = '';
     let pendingSupplierIds = [];   // UUIDs the user has typed but not yet submitted
     let supplierList = [];
+    let selectedRequest = {};
+    let recommendedSuppliers = [];
+    let showRecommendations = false;
     let errorMessage = '';
     let successMessage = '';
     let submitting = false;
@@ -31,8 +33,26 @@
         }
     }
 
+    async function fetchRequestDetails() {
+        errorMessage = '';
+        try {
+            const res = await fetch(
+                `/rfq-service/internal_api/rfqs/${selectedRequestId}`
+            );
+            if (!res.ok) {
+                const text = await res.text();
+                throw new Error(`Error ${res.status}: ${text}`);
+            }
+            selectedRequest = await res.json();
+        } catch (err) {
+            console.error(err);
+            errorMessage = 'Could not load existing suppliers.';
+        }
+    }
+
     // On component mount, load the current suppliers
     onMount(() => {
+        fetchRequestDetails();
         fetchSuppliers();
     });
 
@@ -127,11 +147,29 @@
         dispatch('navigate', 'requests');
     }
 
+    // Fetch recommendations based on available slots
+    async function loadRecommendations() {
+        errorMessage = '';
+        successMessage = '';
+        showRecommendations = false;
+        try {
+            const res = await fetch(`/rfq-service/internal_api/rfqs/${selectedRequestId}/suppliers/recommend`);
+            if (!res.ok) {
+                const text = await res.text();
+                throw new Error(`Error ${res.status}: ${text}`);
+            }
+            recommendedSuppliers = await res.json();
+            showRecommendations = true;
+        } catch (err) {
+            console.error(err);
+            errorMessage = 'Failed to load recommendations. Please try again.';
+        }
+    }
+
     // Helper to format a UTC‐ISO string into the browser’s locale & timezone
     function formatDate(utcString) {
         if (!utcString) return '';
         const d = new Date(utcString);
-        // toLocaleString() will use the user’s locale & timezone automatically
         return d.toLocaleString();
     }
 </script>
@@ -141,6 +179,7 @@
     <p class="text-muted">Request ID: <strong>{selectedRequestId}</strong></p>
     <p class="text-muted">Request Title: <strong>{selectedRequest.title}</strong></p>
     <p class="text-muted">Request Description: <strong>{selectedRequest.description}</strong></p>
+    <p class="text-muted">Request Description: <strong>{selectedRequest.type}</strong></p>
     <p class="text-muted">Request Location: <strong>{selectedRequest.deliveryLocation}</strong></p>
 
     <form on:submit={handleSubmit}>
@@ -159,10 +198,7 @@
                         type="button"
                         class="btn btn-outline-primary"
                         on:click={addSupplier}
-                        disabled={
-                        submitting ||
-                        supplierList.length + pendingSupplierIds.length >= 5
-                    }
+                        disabled={submitting || supplierList.length + pendingSupplierIds.length >= 5}
                 >
                     Add
                 </button>
@@ -183,8 +219,7 @@
                                     type="button"
                                     class="btn btn-sm btn-outline-danger"
                                     on:click={() => removePending(i)}
-                            >
-                                &times;
+                            >&times;
                             </button>
                         </li>
                     {/each}
@@ -195,11 +230,7 @@
         <button
                 type="submit"
                 class="btn btn-primary"
-                disabled={
-                submitting ||
-                pendingSupplierIds.length === 0 ||
-                supplierList.length + pendingSupplierIds.length > 5
-            }
+                disabled={submitting || pendingSupplierIds.length === 0 || supplierList.length + pendingSupplierIds.length > 5}
         >
             {#if submitting}
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -216,6 +247,15 @@
         >
             Back to Requests
         </button>
+
+        <button
+                type="button"
+                class="btn btn-info float-end"
+                on:click={loadRecommendations}
+                disabled={submitting}
+        >
+            Show Recommendations
+        </button>
     </form>
 
     {#if errorMessage}
@@ -223,6 +263,47 @@
     {/if}
     {#if successMessage}
         <div class="alert alert-success mt-4">{successMessage}</div>
+    {/if}
+
+    {#if showRecommendations}
+        <div class="mt-5">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="m-0">Recommended Suppliers</h4>
+                <button type="button" class="btn btn-sm btn-outline-secondary"
+                        on:click={() => showRecommendations = false}>Close
+                </button>
+            </div>
+            {#if recommendedSuppliers.length === 0}
+                <p class="text-muted">No recommendations available.</p>
+            {:else}
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Supplier ID (TBD)</th>
+                        <th>Supplier</th>
+                        <th>Product Name</th>
+                        <th>Product Description</th>
+                        <th>Product Type</th>
+                        <th>Product Delivery Area</th>
+                        <th>Matching Score</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {#each recommendedSuppliers as sup}
+                        <tr>
+                            <td>{sup.supplier_id}</td>
+                            <td>{sup.supplier_name}</td>
+                            <td>{sup.supplier_product_name}</td>
+                            <td>{sup.supplier_product_description}</td>
+                            <td>{sup.supplier_product_type}</td>
+                            <td>{sup.supplier_delivery_area}</td>
+                            <td>{sup.score}</td>
+                        </tr>
+                    {/each}
+                    </tbody>
+                </table>
+            {/if}
+        </div>
     {/if}
 
     <!-- Table of existing suppliers for this RFQ -->

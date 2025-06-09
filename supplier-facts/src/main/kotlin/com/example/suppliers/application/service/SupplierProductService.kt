@@ -26,4 +26,15 @@ class SupplierProductService(
             )
         }
     }
+
+    fun getSupplier(name: String): Supplier? {
+        return supplierProductRepository.findByName(name)?.let { entity ->
+            Supplier(
+                supplierId = entity.supplierId,
+                supplierName = entity.supplierName,
+                deliveryArea = entity.deliveryArea,
+                createdAt = entity.createdAt,
+            )
+        }
+    }
 }

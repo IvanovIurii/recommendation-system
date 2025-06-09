@@ -39,4 +39,17 @@ class DefaultRequestsService(
             )
         }
     }
+
+    override fun getById(rfqId: UUID): RfqItem? {
+        return rfqCoreRepository.findById(rfqId)?.let { entity ->
+            return RfqItem(
+                rfqId = rfqId,
+                title = entity.title,
+                description = entity.description,
+                deliveryLocation = entity.deliveryLocation,
+                createdAt = entity.created,
+                type = entity.productType
+            )
+        }
+    }
 }

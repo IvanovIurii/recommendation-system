@@ -1,0 +1,251 @@
+date,title,description,delivery_location,product_type
+2024-06-24,Seeking Sporting Goods,"Dear supplier, I need Sporting Goods delivered to Vienna. Kindly send me details on availability and cost.",Vienna,Sporting Goods
+2024-06-25,Inquiry: Toys,"Dear supplier, I need Toys delivered to Berlin. Kindly send me details on availability and cost.",Berlin,Toys
+2024-06-26,Looking for Sporting Goods,"Hi, do you have any Sporting Goods available? I'm planning to buy soon and need delivery to Brussels.",Brussels,Sporting Goods
+2024-06-27,Looking for Electronics,"Hello, I'm interested in Electronics. Can you provide product details and pricing for delivery to Lisbon?",Lisbon,Electronics
+2024-06-28,Need Clothing,"Hello, I'm interested in Clothing. Can you provide product details and pricing for delivery to Dublin?",Dublin,Clothing
+2024-07-01,Need Beauty,"Hi, do you have any Beauty available? I'm planning to buy soon and need delivery to Dublin.",Dublin,Beauty
+2024-07-02,Inquiry: Books,"Hello, I'm interested in Books. Can you provide product details and pricing for delivery to Munich?",Munich,Books
+2024-07-03,Looking for Audio,"Dear supplier, I need Audio delivered to Paris. Kindly send me details on availability and cost.",Paris,Audio
+2024-07-04,RFQ: Furniture,"Hello, I'm interested in Furniture. Can you provide product details and pricing for delivery to Helsinki?",Helsinki,Furniture
+2024-07-05,Need Service,"Hello, I'm interested in purchasing Service for my upcoming project. Could you share your catalog and pricing?",Munich,Service
+2024-07-08,Looking for Service,"Hi, do you have any Service available? I'm planning to buy soon and need delivery to Rome.",Rome,Service
+2024-07-09,Inquiry: Audio,"Hello, I'm searching for Audio with specific features. Do you have anything suitable in stock?",Berlin,Audio
+2024-07-10,Inquiry: Audio,"Hi, I'm looking for high-quality Audio to be delivered to Budapest. Please let me know your best offer.",Budapest,Audio
+2024-07-11,Need Audio,"Hello, I'm searching for Audio with specific features. Do you have anything suitable in stock?",Dublin,Audio
+2024-07-12,Seeking Sporting Goods,"Dear supplier, I need Sporting Goods delivered to Munich. Kindly send me details on availability and cost.",Munich,Sporting Goods
+2024-07-15,Inquiry: Books,"Hello, I'm searching for Books with specific features. Do you have anything suitable in stock?",Athens,Books
+2024-07-16,RFQ: Food,"Hi, I'm looking for high-quality Food to be delivered to Amsterdam. Please let me know your best offer.",Amsterdam,Food
+2024-07-17,Inquiry: Electronics,"Hello, I'm searching for Electronics with specific features. Do you have anything suitable in stock?",Oslo,Electronics
+2024-07-18,RFQ: Food,"Hello, I'm searching for Food with specific features. Do you have anything suitable in stock?",Warsaw,Food
+2024-07-19,Need Toys,"Hello, I'm interested in purchasing Toys for my upcoming project. Could you share your catalog and pricing?",Budapest,Toys
+2024-07-22,Seeking Toys,"Hi, I'm looking for high-quality Toys to be delivered to Helsinki. Please let me know your best offer.",Helsinki,Toys
+2024-07-23,Request for Clothing,"Hi, do you have any Clothing available? I'm planning to buy soon and need delivery to Stockholm.",Stockholm,Clothing
+2024-07-24,Request for Books,"Hello, I'm interested in purchasing Books for my upcoming project. Could you share your catalog and pricing?",Berlin,Books
+2024-07-25,Looking for Toys,"Hello, I'm interested in purchasing Toys for my upcoming project. Could you share your catalog and pricing?",Brussels,Toys
+2024-07-26,Looking for Toys,"Hello, I'm interested in purchasing Toys for my upcoming project. Could you share your catalog and pricing?",Madrid,Toys
+2024-07-29,Inquiry: Clothing,"Hello, I'm interested in purchasing Clothing for my upcoming project. Could you share your catalog and pricing?",Warsaw,Clothing
+2024-07-30,Need Sporting Goods,"Hi, I'm looking for high-quality Sporting Goods to be delivered to Prague. Please let me know your best offer.",Prague,Sporting Goods
+2024-07-31,RFQ: Books,"Hi, do you have any Books available? I'm planning to buy soon and need delivery to Helsinki.",Helsinki,Books
+2024-08-01,RFQ: Service,"Dear supplier, I need Service delivered to Munich. Kindly send me details on availability and cost.",Munich,Service
+2024-08-02,Looking for Service,"Hi, do you have any Service available? I'm planning to buy soon and need delivery to Zurich.",Zurich,Service
+2024-08-05,Seeking Service,"Hi, I'm looking for high-quality Service to be delivered to Zurich. Please let me know your best offer.",Zurich,Service
+2024-08-06,Looking for Sporting Goods,"Hello, I'm interested in purchasing Sporting Goods for my upcoming project. Could you share your catalog and pricing?",Budapest,Sporting Goods
+2024-08-07,Need Furniture,"Hi, do you have any Furniture available? I'm planning to buy soon and need delivery to Warsaw.",Warsaw,Furniture
+2024-08-08,Request for Service,"Hello, I'm searching for Service with specific features. Do you have anything suitable in stock?",Berlin,Service
+2024-08-09,Seeking Electronics,"Dear supplier, I need Electronics delivered to Rome. Kindly send me details on availability and cost.",Rome,Electronics
+2024-08-12,Looking for Electronics,"Dear supplier, I need Electronics delivered to Stockholm. Kindly send me details on availability and cost.",Stockholm,Electronics
+2024-08-13,Inquiry: Beauty,"Hi, do you have any Beauty available? I'm planning to buy soon and need delivery to Dublin.",Dublin,Beauty
+2024-08-14,Need Audio,"Hello, I'm searching for Audio with specific features. Do you have anything suitable in stock?",Amsterdam,Audio
+2024-08-15,Inquiry: Electronics,"Hello, I'm searching for Electronics with specific features. Do you have anything suitable in stock?",Brussels,Electronics
+2024-08-16,RFQ: Audio,"Hello, I'm interested in purchasing Audio for my upcoming project. Could you share your catalog and pricing?",Berlin,Audio
+2024-08-19,Seeking Books,"Hello, I'm interested in purchasing Books for my upcoming project. Could you share your catalog and pricing?",Vienna,Books
+2024-08-20,RFQ: Service,"Dear supplier, I need Service delivered to Berlin. Kindly send me details on availability and cost.",Berlin,Service
+2024-08-21,Request for Audio,"Dear supplier, I need Audio delivered to Rome. Kindly send me details on availability and cost.",Rome,Audio
+2024-08-22,Looking for Furniture,"Hello, I'm interested in Furniture. Can you provide product details and pricing for delivery to Munich?",Munich,Furniture
+2024-08-23,Need Toys,"Hello, I'm interested in purchasing Toys for my upcoming project. Could you share your catalog and pricing?",Prague,Toys
+2024-08-26,Need Books,"Hello, I'm interested in Books. Can you provide product details and pricing for delivery to Vienna?",Vienna,Books
+2024-08-27,Looking for Sporting Goods,"Hello, I'm interested in purchasing Sporting Goods for my upcoming project. Could you share your catalog and pricing?",Dublin,Sporting Goods
+2024-08-28,Request for Clothing,"Dear supplier, I need Clothing delivered to Paris. Kindly send me details on availability and cost.",Paris,Clothing
+2024-08-29,Inquiry: Books,"Hello, I'm searching for Books with specific features. Do you have anything suitable in stock?",Dublin,Books
+2024-08-30,Request for Beauty,"Hello, I'm interested in purchasing Beauty for my upcoming project. Could you share your catalog and pricing?",Rome,Beauty
+2024-09-02,Seeking Service,"Hello, I'm searching for Service with specific features. Do you have anything suitable in stock?",Dublin,Service
+2024-09-03,Need Furniture,"Dear supplier, I need Furniture delivered to Amsterdam. Kindly send me details on availability and cost.",Amsterdam,Furniture
+2024-09-04,RFQ: Toys,"Hi, do you have any Toys available? I'm planning to buy soon and need delivery to Paris.",Paris,Toys
+2024-09-05,RFQ: Electronics,"Hello, I'm interested in Electronics. Can you provide product details and pricing for delivery to Dublin?",Dublin,Electronics
+2024-09-06,Need Books,"Dear supplier, I need Books delivered to Prague. Kindly send me details on availability and cost.",Prague,Books
+2024-09-09,Seeking Beauty,"Dear supplier, I need Beauty delivered to Helsinki. Kindly send me details on availability and cost.",Helsinki,Beauty
+2024-09-10,Looking for Electronics,"Hi, I'm looking for high-quality Electronics to be delivered to Athens. Please let me know your best offer.",Athens,Electronics
+2024-09-11,Need Service,"Hello, I'm searching for Service with specific features. Do you have anything suitable in stock?",Copenhagen,Service
+2024-09-12,Inquiry: Audio,"Hello, I'm interested in purchasing Audio for my upcoming project. Could you share your catalog and pricing?",Zurich,Audio
+2024-09-13,RFQ: Audio,"Hi, I'm looking for high-quality Audio to be delivered to Oslo. Please let me know your best offer.",Oslo,Audio
+2024-09-16,Need Service,"Hi, I'm looking for high-quality Service to be delivered to Berlin. Please let me know your best offer.",Berlin,Service
+2024-09-17,Need Audio,"Hello, I'm interested in purchasing Audio for my upcoming project. Could you share your catalog and pricing?",Vienna,Audio
+2024-09-18,RFQ: Food,"Hello, I'm searching for Food with specific features. Do you have anything suitable in stock?",Zurich,Food
+2024-09-19,Looking for Clothing,"Hello, I'm interested in purchasing Clothing for my upcoming project. Could you share your catalog and pricing?",Rome,Clothing
+2024-09-20,Looking for Audio,"Dear supplier, I need Audio delivered to Madrid. Kindly send me details on availability and cost.",Madrid,Audio
+2024-09-23,Need Electronics,"Dear supplier, I need Electronics delivered to Zurich. Kindly send me details on availability and cost.",Zurich,Electronics
+2024-09-24,Need Books,"Hello, I'm interested in Books. Can you provide product details and pricing for delivery to Lisbon?",Lisbon,Books
+2024-09-25,RFQ: Toys,"Dear supplier, I need Toys delivered to Vienna. Kindly send me details on availability and cost.",Vienna,Toys
+2024-09-26,Request for Audio,"Hi, do you have any Audio available? I'm planning to buy soon and need delivery to Madrid.",Madrid,Audio
+2024-09-27,Inquiry: Food,"Hi, I'm looking for high-quality Food to be delivered to Budapest. Please let me know your best offer.",Budapest,Food
+2024-09-30,Seeking Beauty,"Hello, I'm interested in purchasing Beauty for my upcoming project. Could you share your catalog and pricing?",Madrid,Beauty
+2024-10-01,Need Electronics,"Hello, I'm interested in purchasing Electronics for my upcoming project. Could you share your catalog and pricing?",Zurich,Electronics
+2024-10-02,Need Clothing,"Dear supplier, I need Clothing delivered to Helsinki. Kindly send me details on availability and cost.",Helsinki,Clothing
+2024-10-03,Need Books,"Dear supplier, I need Books delivered to Zurich. Kindly send me details on availability and cost.",Zurich,Books
+2024-10-04,RFQ: Service,"Hello, I'm interested in Service. Can you provide product details and pricing for delivery to Budapest?",Budapest,Service
+2024-10-07,Looking for Beauty,"Hello, I'm interested in Beauty. Can you provide product details and pricing for delivery to Stockholm?",Stockholm,Beauty
+2024-10-08,Seeking Toys,"Hello, I'm interested in Toys. Can you provide product details and pricing for delivery to Dublin?",Dublin,Toys
+2024-10-09,Request for Books,"Hi, do you have any Books available? I'm planning to buy soon and need delivery to Barcelona.",Barcelona,Books
+2024-10-10,Looking for Service,"Hello, I'm interested in purchasing Service for my upcoming project. Could you share your catalog and pricing?",Athens,Service
+2024-10-11,Need Books,"Hello, I'm interested in Books. Can you provide product details and pricing for delivery to Munich?",Munich,Books
+2024-10-14,Looking for Clothing,"Hello, I'm searching for Clothing with specific features. Do you have anything suitable in stock?",Amsterdam,Clothing
+2024-10-15,Seeking Audio,"Hello, I'm interested in purchasing Audio for my upcoming project. Could you share your catalog and pricing?",Rome,Audio
+2024-10-16,Need Clothing,"Hello, I'm interested in purchasing Clothing for my upcoming project. Could you share your catalog and pricing?",Madrid,Clothing
+2024-10-17,Looking for Electronics,"Hi, I'm looking for high-quality Electronics to be delivered to Zurich. Please let me know your best offer.",Zurich,Electronics
+2024-10-18,RFQ: Audio,"Hi, I'm looking for high-quality Audio to be delivered to Warsaw. Please let me know your best offer.",Warsaw,Audio
+2024-10-21,RFQ: Service,"Hi, I'm looking for high-quality Service to be delivered to Lisbon. Please let me know your best offer.",Lisbon,Service
+2024-10-22,Looking for Beauty,"Hi, I'm looking for high-quality Beauty to be delivered to Dublin. Please let me know your best offer.",Dublin,Beauty
+2024-10-23,Request for Food,"Hello, I'm interested in purchasing Food for my upcoming project. Could you share your catalog and pricing?",Paris,Food
+2024-10-24,Seeking Beauty,"Hi, I'm looking for high-quality Beauty to be delivered to Helsinki. Please let me know your best offer.",Helsinki,Beauty
+2024-10-25,Inquiry: Sporting Goods,"Hello, I'm interested in purchasing Sporting Goods for my upcoming project. Could you share your catalog and pricing?",Madrid,Sporting Goods
+2024-10-28,Need Toys,"Hi, I'm looking for high-quality Toys to be delivered to Stockholm. Please let me know your best offer.",Stockholm,Toys
+2024-10-29,Seeking Sporting Goods,"Hello, I'm searching for Sporting Goods with specific features. Do you have anything suitable in stock?",Athens,Sporting Goods
+2024-10-30,RFQ: Books,"Hello, I'm interested in Books. Can you provide product details and pricing for delivery to Lisbon?",Lisbon,Books
+2024-10-31,Need Service,"Hi, I'm looking for high-quality Service to be delivered to Barcelona. Please let me know your best offer.",Barcelona,Service
+2024-11-01,Request for Food,"Hi, I'm looking for high-quality Food to be delivered to Copenhagen. Please let me know your best offer.",Copenhagen,Food
+2024-11-04,Need Beauty,"Hi, I'm looking for high-quality Beauty to be delivered to Paris. Please let me know your best offer.",Paris,Beauty
+2024-11-05,RFQ: Beauty,"Dear supplier, I need Beauty delivered to Barcelona. Kindly send me details on availability and cost.",Barcelona,Beauty
+2024-11-06,Seeking Clothing,"Hello, I'm searching for Clothing with specific features. Do you have anything suitable in stock?",Zurich,Clothing
+2024-11-07,Need Clothing,"Hello, I'm interested in Clothing. Can you provide product details and pricing for delivery to Berlin?",Berlin,Clothing
+2024-11-08,Looking for Electronics,"Hello, I'm searching for Electronics with specific features. Do you have anything suitable in stock?",Barcelona,Electronics
+2024-11-11,RFQ: Food,"Dear supplier, I need Food delivered to Warsaw. Kindly send me details on availability and cost.",Warsaw,Food
+2024-11-12,Need Books,"Hi, I'm looking for high-quality Books to be delivered to Copenhagen. Please let me know your best offer.",Copenhagen,Books
+2024-11-13,Inquiry: Sporting Goods,"Hi, do you have any Sporting Goods available? I'm planning to buy soon and need delivery to Rome.",Rome,Sporting Goods
+2024-11-14,Need Sporting Goods,"Hi, do you have any Sporting Goods available? I'm planning to buy soon and need delivery to Prague.",Prague,Sporting Goods
+2024-11-15,Inquiry: Books,"Hello, I'm interested in Books. Can you provide product details and pricing for delivery to Zurich?",Zurich,Books
+2024-11-18,Request for Beauty,"Hi, do you have any Beauty available? I'm planning to buy soon and need delivery to Helsinki.",Helsinki,Beauty
+2024-11-19,Seeking Clothing,"Hi, do you have any Clothing available? I'm planning to buy soon and need delivery to Zurich.",Zurich,Clothing
+2024-11-20,Need Beauty,"Hi, I'm looking for high-quality Beauty to be delivered to Madrid. Please let me know your best offer.",Madrid,Beauty
+2024-11-21,RFQ: Service,"Hello, I'm interested in purchasing Service for my upcoming project. Could you share your catalog and pricing?",Rome,Service
+2024-11-22,Request for Clothing,"Hello, I'm interested in Clothing. Can you provide product details and pricing for delivery to Barcelona?",Barcelona,Clothing
+2024-11-25,Need Electronics,"Hi, I'm looking for high-quality Electronics to be delivered to Rome. Please let me know your best offer.",Rome,Electronics
+2024-11-26,Seeking Furniture,"Hello, I'm searching for Furniture with specific features. Do you have anything suitable in stock?",Helsinki,Furniture
+2024-11-27,Inquiry: Books,"Hi, I'm looking for high-quality Books to be delivered to Rome. Please let me know your best offer.",Rome,Books
+2024-11-28,Need Beauty,"Hi, I'm looking for high-quality Beauty to be delivered to Rome. Please let me know your best offer.",Rome,Beauty
+2024-11-29,Inquiry: Electronics,"Dear supplier, I need Electronics delivered to Warsaw. Kindly send me details on availability and cost.",Warsaw,Electronics
+2024-12-02,Seeking Furniture,"Hi, do you have any Furniture available? I'm planning to buy soon and need delivery to Zurich.",Zurich,Furniture
+2024-12-03,Inquiry: Electronics,"Hello, I'm interested in purchasing Electronics for my upcoming project. Could you share your catalog and pricing?",Helsinki,Electronics
+2024-12-04,Inquiry: Electronics,"Dear supplier, I need Electronics delivered to Munich. Kindly send me details on availability and cost.",Munich,Electronics
+2024-12-05,Seeking Books,"Dear supplier, I need Books delivered to Zurich. Kindly send me details on availability and cost.",Zurich,Books
+2024-12-06,Looking for Clothing,"Hello, I'm interested in purchasing Clothing for my upcoming project. Could you share your catalog and pricing?",Munich,Clothing
+2024-12-09,Inquiry: Books,"Dear supplier, I need Books delivered to Lisbon. Kindly send me details on availability and cost.",Lisbon,Books
+2024-12-10,Inquiry: Food,"Dear supplier, I need Food delivered to Copenhagen. Kindly send me details on availability and cost.",Copenhagen,Food
+2024-12-11,Inquiry: Sporting Goods,"Hi, do you have any Sporting Goods available? I'm planning to buy soon and need delivery to Paris.",Paris,Sporting Goods
+2024-12-12,Inquiry: Furniture,"Hello, I'm interested in Furniture. Can you provide product details and pricing for delivery to Warsaw?",Warsaw,Furniture
+2024-12-13,Request for Food,"Hello, I'm searching for Food with specific features. Do you have anything suitable in stock?",Copenhagen,Food
+2024-12-16,Seeking Furniture,"Dear supplier, I need Furniture delivered to Oslo. Kindly send me details on availability and cost.",Oslo,Furniture
+2024-12-17,Request for Toys,"Hi, do you have any Toys available? I'm planning to buy soon and need delivery to Athens.",Athens,Toys
+2024-12-18,Inquiry: Audio,"Hi, do you have any Audio available? I'm planning to buy soon and need delivery to Athens.",Athens,Audio
+2024-12-19,Request for Audio,"Dear supplier, I need Audio delivered to Madrid. Kindly send me details on availability and cost.",Madrid,Audio
+2024-12-20,Request for Electronics,"Hello, I'm interested in Electronics. Can you provide product details and pricing for delivery to Oslo?",Oslo,Electronics
+2024-12-23,Request for Clothing,"Hi, do you have any Clothing available? I'm planning to buy soon and need delivery to Munich.",Munich,Clothing
+2024-12-24,Request for Sporting Goods,"Hello, I'm interested in Sporting Goods. Can you provide product details and pricing for delivery to Madrid?",Madrid,Sporting Goods
+2024-12-25,RFQ: Books,"Hello, I'm searching for Books with specific features. Do you have anything suitable in stock?",Paris,Books
+2024-12-26,Looking for Audio,"Dear supplier, I need Audio delivered to Stockholm. Kindly send me details on availability and cost.",Stockholm,Audio
+2024-12-27,Need Books,"Hi, do you have any Books available? I'm planning to buy soon and need delivery to Athens.",Athens,Books
+2024-12-30,Need Audio,"Hello, I'm interested in purchasing Audio for my upcoming project. Could you share your catalog and pricing?",Copenhagen,Audio
+2024-12-31,Need Sporting Goods,"Dear supplier, I need Sporting Goods delivered to Budapest. Kindly send me details on availability and cost.",Budapest,Sporting Goods
+2025-01-01,Seeking Furniture,"Hi, do you have any Furniture available? I'm planning to buy soon and need delivery to Barcelona.",Barcelona,Furniture
+2025-01-02,Request for Service,"Hello, I'm searching for Service with specific features. Do you have anything suitable in stock?",Munich,Service
+2025-01-03,Seeking Clothing,"Hello, I'm interested in purchasing Clothing for my upcoming project. Could you share your catalog and pricing?",Athens,Clothing
+2025-01-06,Seeking Sporting Goods,"Hi, I'm looking for high-quality Sporting Goods to be delivered to Stockholm. Please let me know your best offer.",Stockholm,Sporting Goods
+2025-01-07,RFQ: Furniture,"Hi, I'm looking for high-quality Furniture to be delivered to Berlin. Please let me know your best offer.",Berlin,Furniture
+2025-01-08,Seeking Clothing,"Dear supplier, I need Clothing delivered to Madrid. Kindly send me details on availability and cost.",Madrid,Clothing
+2025-01-09,Need Food,"Hello, I'm interested in purchasing Food for my upcoming project. Could you share your catalog and pricing?",Barcelona,Food
+2025-01-10,Request for Furniture,"Hi, do you have any Furniture available? I'm planning to buy soon and need delivery to Munich.",Munich,Furniture
+2025-01-13,RFQ: Beauty,"Hi, do you have any Beauty available? I'm planning to buy soon and need delivery to Berlin.",Berlin,Beauty
+2025-01-14,Request for Toys,"Hi, I'm looking for high-quality Toys to be delivered to Warsaw. Please let me know your best offer.",Warsaw,Toys
+2025-01-15,Seeking Furniture,"Hi, do you have any Furniture available? I'm planning to buy soon and need delivery to Dublin.",Dublin,Furniture
+2025-01-16,Looking for Clothing,"Hi, do you have any Clothing available? I'm planning to buy soon and need delivery to Amsterdam.",Amsterdam,Clothing
+2025-01-17,Request for Books,"Hello, I'm interested in purchasing Books for my upcoming project. Could you share your catalog and pricing?",Vienna,Books
+2025-01-20,RFQ: Electronics,"Hello, I'm searching for Electronics with specific features. Do you have anything suitable in stock?",Athens,Electronics
+2025-01-21,RFQ: Service,"Dear supplier, I need Service delivered to Munich. Kindly send me details on availability and cost.",Munich,Service
+2025-01-22,RFQ: Furniture,"Dear supplier, I need Furniture delivered to Copenhagen. Kindly send me details on availability and cost.",Copenhagen,Furniture
+2025-01-23,Need Food,"Hi, do you have any Food available? I'm planning to buy soon and need delivery to Vienna.",Vienna,Food
+2025-01-24,Request for Audio,"Dear supplier, I need Audio delivered to Berlin. Kindly send me details on availability and cost.",Berlin,Audio
+2025-01-27,Request for Audio,"Hello, I'm interested in purchasing Audio for my upcoming project. Could you share your catalog and pricing?",Paris,Audio
+2025-01-28,Inquiry: Beauty,"Hello, I'm searching for Beauty with specific features. Do you have anything suitable in stock?",Amsterdam,Beauty
+2025-01-29,RFQ: Clothing,"Hi, do you have any Clothing available? I'm planning to buy soon and need delivery to Helsinki.",Helsinki,Clothing
+2025-01-30,Looking for Clothing,"Dear supplier, I need Clothing delivered to Athens. Kindly send me details on availability and cost.",Athens,Clothing
+2025-01-31,Request for Electronics,"Hello, I'm interested in purchasing Electronics for my upcoming project. Could you share your catalog and pricing?",Oslo,Electronics
+2025-02-03,Request for Books,"Dear supplier, I need Books delivered to Madrid. Kindly send me details on availability and cost.",Madrid,Books
+2025-02-04,RFQ: Furniture,"Hello, I'm searching for Furniture with specific features. Do you have anything suitable in stock?",Helsinki,Furniture
+2025-02-05,Inquiry: Toys,"Hello, I'm searching for Toys with specific features. Do you have anything suitable in stock?",Lisbon,Toys
+2025-02-06,Inquiry: Electronics,"Hello, I'm searching for Electronics with specific features. Do you have anything suitable in stock?",Lisbon,Electronics
+2025-02-07,Request for Food,"Hello, I'm searching for Food with specific features. Do you have anything suitable in stock?",Rome,Food
+2025-02-10,Request for Beauty,"Hello, I'm interested in purchasing Beauty for my upcoming project. Could you share your catalog and pricing?",Paris,Beauty
+2025-02-11,Seeking Clothing,"Hello, I'm searching for Clothing with specific features. Do you have anything suitable in stock?",Vienna,Clothing
+2025-02-12,Inquiry: Service,"Dear supplier, I need Service delivered to Amsterdam. Kindly send me details on availability and cost.",Amsterdam,Service
+2025-02-13,Request for Clothing,"Hi, I'm looking for high-quality Clothing to be delivered to Barcelona. Please let me know your best offer.",Barcelona,Clothing
+2025-02-14,Looking for Furniture,"Hi, do you have any Furniture available? I'm planning to buy soon and need delivery to Oslo.",Oslo,Furniture
+2025-02-17,RFQ: Clothing,"Hello, I'm interested in purchasing Clothing for my upcoming project. Could you share your catalog and pricing?",Zurich,Clothing
+2025-02-18,Request for Food,"Dear supplier, I need Food delivered to Barcelona. Kindly send me details on availability and cost.",Barcelona,Food
+2025-02-19,Seeking Clothing,"Hello, I'm interested in purchasing Clothing for my upcoming project. Could you share your catalog and pricing?",Paris,Clothing
+2025-02-20,Looking for Food,"Hello, I'm interested in purchasing Food for my upcoming project. Could you share your catalog and pricing?",Prague,Food
+2025-02-21,RFQ: Clothing,"Hello, I'm searching for Clothing with specific features. Do you have anything suitable in stock?",Helsinki,Clothing
+2025-02-24,Seeking Books,"Hello, I'm interested in Books. Can you provide product details and pricing for delivery to Rome?",Rome,Books
+2025-02-25,Seeking Service,"Hi, do you have any Service available? I'm planning to buy soon and need delivery to Rome.",Rome,Service
+2025-02-26,Looking for Furniture,"Hello, I'm interested in purchasing Furniture for my upcoming project. Could you share your catalog and pricing?",Warsaw,Furniture
+2025-02-27,Request for Clothing,"Hello, I'm interested in Clothing. Can you provide product details and pricing for delivery to Budapest?",Budapest,Clothing
+2025-02-28,Seeking Books,"Hi, do you have any Books available? I'm planning to buy soon and need delivery to Copenhagen.",Copenhagen,Books
+2025-03-03,Request for Electronics,"Hi, I'm looking for high-quality Electronics to be delivered to Zurich. Please let me know your best offer.",Zurich,Electronics
+2025-03-04,Inquiry: Toys,"Hi, I'm looking for high-quality Toys to be delivered to Berlin. Please let me know your best offer.",Berlin,Toys
+2025-03-05,Looking for Food,"Hi, I'm looking for high-quality Food to be delivered to Madrid. Please let me know your best offer.",Madrid,Food
+2025-03-06,Seeking Books,"Hello, I'm interested in Books. Can you provide product details and pricing for delivery to Munich?",Munich,Books
+2025-03-07,Seeking Audio,"Hi, do you have any Audio available? I'm planning to buy soon and need delivery to Paris.",Paris,Audio
+2025-03-10,Looking for Food,"Hello, I'm interested in Food. Can you provide product details and pricing for delivery to Brussels?",Brussels,Food
+2025-03-11,Inquiry: Food,"Hi, I'm looking for high-quality Food to be delivered to Amsterdam. Please let me know your best offer.",Amsterdam,Food
+2025-03-12,Looking for Food,"Dear supplier, I need Food delivered to Barcelona. Kindly send me details on availability and cost.",Barcelona,Food
+2025-03-13,Request for Food,"Hello, I'm interested in Food. Can you provide product details and pricing for delivery to Vienna?",Vienna,Food
+2025-03-14,Need Books,"Hello, I'm interested in Books. Can you provide product details and pricing for delivery to Barcelona?",Barcelona,Books
+2025-03-17,Looking for Sporting Goods,"Hello, I'm interested in purchasing Sporting Goods for my upcoming project. Could you share your catalog and pricing?",Warsaw,Sporting Goods
+2025-03-18,Inquiry: Clothing,"Hello, I'm interested in purchasing Clothing for my upcoming project. Could you share your catalog and pricing?",Athens,Clothing
+2025-03-19,Need Furniture,"Hello, I'm searching for Furniture with specific features. Do you have anything suitable in stock?",Paris,Furniture
+2025-03-20,Inquiry: Toys,"Hello, I'm interested in Toys. Can you provide product details and pricing for delivery to Rome?",Rome,Toys
+2025-03-21,Seeking Clothing,"Hello, I'm interested in Clothing. Can you provide product details and pricing for delivery to Dublin?",Dublin,Clothing
+2025-03-24,Request for Service,"Dear supplier, I need Service delivered to Barcelona. Kindly send me details on availability and cost.",Barcelona,Service
+2025-03-25,Need Beauty,"Hello, I'm searching for Beauty with specific features. Do you have anything suitable in stock?",Helsinki,Beauty
+2025-03-26,Looking for Toys,"Dear supplier, I need Toys delivered to Madrid. Kindly send me details on availability and cost.",Madrid,Toys
+2025-03-27,Looking for Food,"Hi, do you have any Food available? I'm planning to buy soon and need delivery to Copenhagen.",Copenhagen,Food
+2025-03-28,Need Clothing,"Hi, I'm looking for high-quality Clothing to be delivered to Oslo. Please let me know your best offer.",Oslo,Clothing
+2025-03-31,Request for Beauty,"Hi, do you have any Beauty available? I'm planning to buy soon and need delivery to Amsterdam.",Amsterdam,Beauty
+2025-04-01,Inquiry: Audio,"Hello, I'm interested in Audio. Can you provide product details and pricing for delivery to Munich?",Munich,Audio
+2025-04-02,RFQ: Food,"Hi, I'm looking for high-quality Food to be delivered to Paris. Please let me know your best offer.",Paris,Food
+2025-04-03,Request for Audio,"Hello, I'm interested in Audio. Can you provide product details and pricing for delivery to Barcelona?",Barcelona,Audio
+2025-04-04,Seeking Toys,"Hello, I'm interested in purchasing Toys for my upcoming project. Could you share your catalog and pricing?",Brussels,Toys
+2025-04-07,Request for Furniture,"Hello, I'm interested in purchasing Furniture for my upcoming project. Could you share your catalog and pricing?",Athens,Furniture
+2025-04-08,RFQ: Service,"Hello, I'm interested in Service. Can you provide product details and pricing for delivery to Vienna?",Vienna,Service
+2025-04-09,Inquiry: Furniture,"Hi, do you have any Furniture available? I'm planning to buy soon and need delivery to Budapest.",Budapest,Furniture
+2025-04-10,Looking for Furniture,"Dear supplier, I need Furniture delivered to Budapest. Kindly send me details on availability and cost.",Budapest,Furniture
+2025-04-11,RFQ: Sporting Goods,"Dear supplier, I need Sporting Goods delivered to Madrid. Kindly send me details on availability and cost.",Madrid,Sporting Goods
+2025-04-14,Looking for Food,"Dear supplier, I need Food delivered to Amsterdam. Kindly send me details on availability and cost.",Amsterdam,Food
+2025-04-15,Need Audio,"Hi, I'm looking for high-quality Audio to be delivered to Rome. Please let me know your best offer.",Rome,Audio
+2025-04-16,RFQ: Sporting Goods,"Hi, I'm looking for high-quality Sporting Goods to be delivered to Paris. Please let me know your best offer.",Paris,Sporting Goods
+2025-04-17,Seeking Audio,"Hello, I'm searching for Audio with specific features. Do you have anything suitable in stock?",Paris,Audio
+2025-04-18,Inquiry: Audio,"Dear supplier, I need Audio delivered to Athens. Kindly send me details on availability and cost.",Athens,Audio
+2025-04-21,Inquiry: Audio,"Hello, I'm searching for Audio with specific features. Do you have anything suitable in stock?",Stockholm,Audio
+2025-04-22,Request for Beauty,"Hello, I'm searching for Beauty with specific features. Do you have anything suitable in stock?",Dublin,Beauty
+2025-04-23,Request for Service,"Hi, do you have any Service available? I'm planning to buy soon and need delivery to Warsaw.",Warsaw,Service
+2025-04-24,Inquiry: Beauty,"Hi, I'm looking for high-quality Beauty to be delivered to Vienna. Please let me know your best offer.",Vienna,Beauty
+2025-04-25,RFQ: Toys,"Hi, do you have any Toys available? I'm planning to buy soon and need delivery to Stockholm.",Stockholm,Toys
+2025-04-28,Seeking Audio,"Hello, I'm interested in Audio. Can you provide product details and pricing for delivery to Zurich?",Zurich,Audio
+2025-04-29,RFQ: Clothing,"Hello, I'm searching for Clothing with specific features. Do you have anything suitable in stock?",Amsterdam,Clothing
+2025-04-30,Looking for Toys,"Dear supplier, I need Toys delivered to Prague. Kindly send me details on availability and cost.",Prague,Toys
+2025-05-01,Need Toys,"Hello, I'm interested in Toys. Can you provide product details and pricing for delivery to Rome?",Rome,Toys
+2025-05-02,Need Food,"Dear supplier, I need Food delivered to Vienna. Kindly send me details on availability and cost.",Vienna,Food
+2025-05-05,RFQ: Electronics,"Hello, I'm interested in Electronics. Can you provide product details and pricing for delivery to Barcelona?",Barcelona,Electronics
+2025-05-06,Looking for Books,"Hello, I'm interested in Books. Can you provide product details and pricing for delivery to Amsterdam?",Amsterdam,Books
+2025-05-07,Looking for Audio,"Hi, I'm looking for high-quality Audio to be delivered to Dublin. Please let me know your best offer.",Dublin,Audio
+2025-05-08,Need Service,"Hi, do you have any Service available? I'm planning to buy soon and need delivery to Stockholm.",Stockholm,Service
+2025-05-09,Looking for Beauty,"Hello, I'm searching for Beauty with specific features. Do you have anything suitable in stock?",Athens,Beauty
+2025-05-12,Request for Books,"Hello, I'm searching for Books with specific features. Do you have anything suitable in stock?",Vienna,Books
+2025-05-13,RFQ: Books,"Hi, do you have any Books available? I'm planning to buy soon and need delivery to Budapest.",Budapest,Books
+2025-05-14,Looking for Electronics,"Dear supplier, I need Electronics delivered to Stockholm. Kindly send me details on availability and cost.",Stockholm,Electronics
+2025-05-15,Inquiry: Books,"Hi, I'm looking for high-quality Books to be delivered to Amsterdam. Please let me know your best offer.",Amsterdam,Books
+2025-05-16,Need Clothing,"Hi, I'm looking for high-quality Clothing to be delivered to Warsaw. Please let me know your best offer.",Warsaw,Clothing
+2025-05-19,Need Toys,"Hello, I'm interested in purchasing Toys for my upcoming project. Could you share your catalog and pricing?",Dublin,Toys
+2025-05-20,Request for Clothing,"Hello, I'm interested in purchasing Clothing for my upcoming project. Could you share your catalog and pricing?",Prague,Clothing
+2025-05-21,Looking for Toys,"Hello, I'm interested in Toys. Can you provide product details and pricing for delivery to Amsterdam?",Amsterdam,Toys
+2025-05-22,RFQ: Books,"Hello, I'm searching for Books with specific features. Do you have anything suitable in stock?",Rome,Books
+2025-05-23,Seeking Food,"Dear supplier, I need Food delivered to Budapest. Kindly send me details on availability and cost.",Budapest,Food
+2025-05-26,Need Audio,"Dear supplier, I need Audio delivered to Dublin. Kindly send me details on availability and cost.",Dublin,Audio
+2025-05-27,RFQ: Service,"Hello, I'm searching for Service with specific features. Do you have anything suitable in stock?",Zurich,Service
+2025-05-28,Request for Toys,"Hi, do you have any Toys available? I'm planning to buy soon and need delivery to Brussels.",Brussels,Toys
+2025-05-29,Seeking Service,"Dear supplier, I need Service delivered to Rome. Kindly send me details on availability and cost.",Rome,Service
+2025-05-30,Request for Furniture,"Hi, do you have any Furniture available? I'm planning to buy soon and need delivery to Athens.",Athens,Furniture
+2025-06-02,RFQ: Furniture,"Dear supplier, I need Furniture delivered to Oslo. Kindly send me details on availability and cost.",Oslo,Furniture
+2025-06-03,Request for Beauty,"Hello, I'm interested in purchasing Beauty for my upcoming project. Could you share your catalog and pricing?",Zurich,Beauty
+2025-06-04,Inquiry: Books,"Hello, I'm interested in Books. Can you provide product details and pricing for delivery to Zurich?",Zurich,Books
+2025-06-05,Looking for Clothing,"Dear supplier, I need Clothing delivered to Lisbon. Kindly send me details on availability and cost.",Lisbon,Clothing
+2025-06-06,Looking for Beauty,"Dear supplier, I need Beauty delivered to Amsterdam. Kindly send me details on availability and cost.",Amsterdam,Beauty

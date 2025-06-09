@@ -12,9 +12,6 @@
     // when currentPage === 'requestDetail', selectedRequestId holds the UUID
     let selectedRequestId = null;
 
-    // store the full object (so title/description/location are immediately available)
-    let selectedRequest = {};
-
     // Parse window.location.hash → currentPage & selectedRequestId
     function syncFromHash() {
         const raw = window.location.hash.slice(1); // strip leading '#'
@@ -53,14 +50,6 @@
 
     // Handle the dispatched “navigate” event
     function onNavigateEvent(e) {
-        const {page: p, id: idParam, request} = e.detail;
-
-        // If we got a full request object, store it now
-        if (p === 'requestDetail' && request) {
-            selectedRequest = request;
-        }
-
-        // Then update the URL hash based on page & id
         navigateTo(e.detail);
     }
 
@@ -85,7 +74,6 @@
         <!-- Now pass both the ID and the full request object -->
         <RequestDetails
                 {selectedRequestId}
-                {selectedRequest}
                 on:navigate={onNavigateEvent}
         />
     {/if}
