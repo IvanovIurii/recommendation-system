@@ -10,7 +10,10 @@ class CsvUploaderService(
     private val dataUploader: DataUploader,
 ) {
     fun uploadData(file: MultipartFile) {
+        logger.info("Starting uploading data")
         dataUploader.uploadData(file)
+
+        logger.info("End of uploading")
     }
 
     private companion object {

@@ -27,6 +27,7 @@ class SupplierProductService(
         }
     }
 
+    // NOTE: the name of supplier is unique, therefore, this can also represent the identity of an entity
     fun getSupplier(name: String): Supplier? {
         return supplierProductRepository.findByName(name)?.let { entity ->
             Supplier(

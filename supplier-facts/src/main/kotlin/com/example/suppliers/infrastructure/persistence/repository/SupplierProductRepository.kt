@@ -55,7 +55,7 @@ class SupplierProductRepository(
         jdbcAggregateTemplate.insertAll(productList)
     }
 
-    // todo: should not really return entity, but domain object
+    // todo: should not really return entity, but infra domain objects
     fun findById(supplierId: UUID): SupplierEntity? {
         return jdbcAggregateTemplate.findById(supplierId, SupplierEntity::class.java)
     }
