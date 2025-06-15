@@ -23,10 +23,10 @@ graph TD
 
 Services running locally (not in containers) on localhost on different ports.
 
-1. Connect Admin (UI) (port 8089)
-2. Supplier Facts Service (port 8080)
-3. RFQ Service (port 8081)
-4. Recommendation Service (port 8000)
+1. [Connect Admin (UI)](connect-admin/README.md). (port 8089)
+2. [Supplier Facts Service](supplier-facts/README.md) (port 8080)
+3. [RFQ Service](rfq-service/README.md) (port 8081)
+4. [Recommendation Service](recommendation-service/README.md) (port 8000)
 
 ## How to run PostgresSQL
 
