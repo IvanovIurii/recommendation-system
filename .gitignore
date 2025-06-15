@@ -11,3 +11,4 @@ rfq-service/build
 rfq-service/.kotlin
 rfq-service/.gradle
 .idea/
+/recommendation-service/city_cache.json
