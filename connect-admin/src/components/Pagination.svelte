@@ -1,8 +1,8 @@
 <script>
     import {createEventDispatcher} from 'svelte';
 
-    export let page = 0;          // zero-based
-    export let totalPages = 1;    // total number of pages (minimum 1)
+    export let page = 0;
+    export let totalPages = 1;
 
     const dispatch = createEventDispatcher();
 

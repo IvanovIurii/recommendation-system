@@ -25,7 +25,6 @@
         }
     }
 
-    // Now accepts the entire `req` object instead of only its ID
     function goToDetail(req) {
         dispatch('navigate', {
             page: 'requestDetail',

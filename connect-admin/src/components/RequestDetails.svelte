@@ -6,7 +6,7 @@
     const dispatch = createEventDispatcher();
 
     let supplierInput = '';
-    let pendingSupplierIds = [];   // UUIDs the user has typed but not yet submitted
+    let pendingSupplierIds = [];
     let supplierList = [];
     let selectedRequest = {};
     let recommendedSuppliers = [];
@@ -15,7 +15,6 @@
     let successMessage = '';
     let submitting = false;
 
-    // Helper: fetch the existing suppliers for this RFQ and populate `supplierList`
     async function fetchSuppliers() {
         errorMessage = '';
         try {
@@ -50,7 +49,6 @@
         }
     }
 
-    // On component mount, load the current suppliers
     onMount(() => {
         fetchRequestDetails();
         fetchSuppliers();
@@ -66,18 +64,16 @@
             return;
         }
 
-        // Check total (existing + pending) would not exceed 5
         if (supplierList.length + pendingSupplierIds.length >= 5) {
             errorMessage = 'You can add at most 5 suppliers in total.';
             return;
         }
 
-        // Ensure no duplicate in pending
         if (pendingSupplierIds.includes(candidate)) {
             errorMessage = 'This UUID is already in the pending list.';
             return;
         }
-        // Also ensure not already attached on the server
+
         if (supplierList.some((s) => s.id === candidate)) {
             errorMessage = 'This supplier is already attached to the RFQ.';
             return;
@@ -102,7 +98,7 @@
             errorMessage = 'Add at least one supplier before submitting.';
             return;
         }
-        // Double-check total count won't exceed 5
+
         if (supplierList.length + pendingSupplierIds.length > 5) {
             errorMessage = 'Cannot add more than 5 suppliers in total.';
             return;
@@ -124,9 +120,7 @@
                 throw new Error(`Error ${res.status}: ${text}`);
             }
             successMessage = 'Suppliers successfully added!';
-            // Clear the pending list
             pendingSupplierIds = [];
-            // Re-fetch the updated list from server
             await fetchSuppliers();
         } catch (err) {
             console.error(err);
@@ -137,7 +131,6 @@
     }
 
     function removePending(idx) {
-        // Remove one UUID from the pending list
         pendingSupplierIds = pendingSupplierIds.filter((_, i) => i !== idx);
         errorMessage = '';
         successMessage = '';
@@ -147,7 +140,6 @@
         dispatch('navigate', 'requests');
     }
 
-    // Fetch recommendations based on available slots
     async function loadRecommendations() {
         errorMessage = '';
         successMessage = '';
@@ -166,7 +158,6 @@
         }
     }
 
-    // Helper to format a UTC‐ISO string into the browser’s locale & timezone
     function formatDate(utcString) {
         if (!utcString) return '';
         const d = new Date(utcString);
@@ -306,7 +297,6 @@
         </div>
     {/if}
 
-    <!-- Table of existing suppliers for this RFQ -->
     <div class="mt-5">
         <h4>Current Suppliers for This Request</h4>
         {#if supplierList.length === 0}

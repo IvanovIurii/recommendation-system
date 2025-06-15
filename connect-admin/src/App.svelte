@@ -6,22 +6,16 @@
     import Requests from './components/Requests.svelte';
     import RequestDetails from './components/RequestDetails.svelte';
 
-    // currentPage: 'home' | 'products' | 'requests' | 'requestDetail'
     let currentPage = 'home';
-
-    // when currentPage === 'requestDetail', selectedRequestId holds the UUID
     let selectedRequestId = null;
 
-    // Parse window.location.hash → currentPage & selectedRequestId
     function syncFromHash() {
-        const raw = window.location.hash.slice(1); // strip leading '#'
+        const raw = window.location.hash.slice(1);
         if (!raw) {
             currentPage = 'home';
             selectedRequestId = null;
             return;
         }
-
-        // Could be: 'home', 'products', 'requests', or 'requestDetail/abc-uuid'
         const [page, param] = raw.split('/', 2);
 
         if (page === 'products' || page === 'requests' || page === 'home') {
@@ -37,8 +31,6 @@
     }
 
     function navigateTo(payload) {
-        // payload = either a string ('home'/'products'/'requests')
-        // or { page: 'requestDetail', id: '<UUID>' }
         if (typeof payload === 'string') {
             window.location.hash = payload;
         } else if (payload.page === 'requestDetail' && payload.id) {
@@ -48,7 +40,6 @@
         }
     }
 
-    // Handle the dispatched “navigate” event
     function onNavigateEvent(e) {
         navigateTo(e.detail);
     }
@@ -68,10 +59,8 @@
     {:else if currentPage === 'products'}
         <ProductTable/>
     {:else if currentPage === 'requests'}
-        <!-- Pass the same navigate handler down -->
         <Requests on:navigate={onNavigateEvent}/>
     {:else if currentPage === 'requestDetail' && selectedRequestId}
-        <!-- Now pass both the ID and the full request object -->
         <RequestDetails
                 {selectedRequestId}
                 on:navigate={onNavigateEvent}
