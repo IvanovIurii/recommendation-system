@@ -78,7 +78,7 @@ def train_model(combined_path, model_path):
     sup_cities = set(c.strip() for areas in df['supplier_delivery_area'] for c in areas.split(','))
     geocode_cities(rfq_cities | sup_cities, geolocator, cache)
 
-    # Compute normalized distance
+    # compute normalized distance
     distances = []
     for _, row in df.iterrows():
         areas = [c.strip() for c in row['supplier_delivery_area'].split(',')]
@@ -88,7 +88,7 @@ def train_model(combined_path, model_path):
     max_d = max(distances) or 1.0
     df['dist_norm'] = [1 - d / max_d for d in distances]
 
-    # Compute semantic text similarity
+    # compute semantic text similarity
     rfq_texts = (df['rfq_title'] + ' ' + df['rfq_description']).tolist()
     sup_texts = (df['supplier_product_name'] + ' ' + df['supplier_product_description']).tolist()
 
@@ -127,15 +127,11 @@ def train_model(combined_path, model_path):
     print(f"Elapsed: {end - start:.4f} seconds")
 
 
-# pipeline = None
-# sup_df = None
-# geolocator = None
-# sup_emb = None
-
-
 def recommend_suppliers(
-        suppliers_path,
-        model_path,
+        sup_df,
+        pipeline,
+        geolocator,
+        sup_emb,
         rfq_title,
         rfq_description,
         rfq_location,
@@ -143,33 +139,28 @@ def recommend_suppliers(
         top_n
 ):
     start = time.time()
-    pipeline = joblib.load(model_path)
-    sup_df = pd.read_csv(suppliers_path)
 
-    geolocator = Nominatim(user_agent="rfq_cli")
     cache = load_cache()
     rfq_cities = {rfq_location}
     sup_cities = set(c.strip() for areas in sup_df['supplier_delivery_area'] for c in areas.split(','))
     geocode_cities(sup_cities | rfq_cities, geolocator, cache)
 
-    # Distance
+    if cache[rfq_location]['lat'] is None:
+        raise Exception("Could not geocode RFQ location")
+
     dists = []
     for areas in sup_df['supplier_delivery_area']:
-        lst = [c.strip() for c in areas.split(',')]
-        d = compute_min_distance(rfq_location, lst, cache)
+        cities = [c.strip() for c in areas.split(',')]
+        d = compute_min_distance(rfq_location, cities, cache)
         dists.append(d if d is not None else 0.0)
 
     max_d = max(dists) or 1.0
     dist_norm = [1 - d / max_d for d in dists]
 
-    # Text sim
     rfq_texts = [rfq_title + ' ' + rfq_description]
-    sup_texts = (sup_df['supplier_product_name'] + ' ' + sup_df['supplier_product_description']).tolist()
-
-    sup_emb = EMBEDDER.encode(sup_texts, convert_to_numpy=True, normalize_embeddings=True)
     rfq_emb = EMBEDDER.encode(rfq_texts, convert_to_numpy=True, normalize_embeddings=True)[0]
 
-    text_sim = [float(np.dot(rfq_emb, sup_emb[i])) for i in range(len(sup_emb))]
+    text_sim = np.dot(sup_emb, rfq_emb)
 
     X_pred = pd.DataFrame({'dist_norm': dist_norm, 'text_sim': text_sim})
     probs = pipeline.predict_proba(X_pred)[:, 1]
@@ -210,8 +201,17 @@ def main():
     if args.command == 'train':
         train_model(args.dataset, args.model)
     else:
-        recommend_suppliers(args.suppliers,
-                            args.model,
+        sup_df = pd.read_csv(args.suppliers)
+        pipeline = joblib.load(args.model)
+        geolocator = Nominatim(user_agent="rfq_cli")
+
+        sup_texts = (sup_df['supplier_product_name'] + ' ' + sup_df['supplier_product_description']).tolist()
+        sup_emb = EMBEDDER.encode(sup_texts, convert_to_numpy=True, normalize_embeddings=True)
+
+        recommend_suppliers(sup_df,
+                            pipeline,
+                            geolocator,
+                            sup_emb,
                             args.rfq_title,
                             args.rfq_description,
                             args.rfq_location,

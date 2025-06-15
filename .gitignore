@@ -12,3 +12,4 @@ rfq-service/.kotlin
 rfq-service/.gradle
 .idea/
 /recommendation-service/city_cache.json
+/recommendation-service/rfq_model.pkl
